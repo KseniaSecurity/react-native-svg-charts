@@ -157,7 +157,7 @@ class BarChart extends PureComponent {
 
         return (
             <View style={style}>
-                <View style={{ flex: 1 }} onLayout={(event) => this._onLayout(event)}>
+                <View style={{ flex: 1 }} onLayout={(event) => this._onLayout(event)} testID="BarChart">
                     {height > 0 && width > 0 && (
                         <Svg style={{ height, width }}>
                             {React.Children.map(children, (child) => {
