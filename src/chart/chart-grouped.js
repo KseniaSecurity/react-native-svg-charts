@@ -97,7 +97,11 @@ class ChartGrouped extends PureComponent {
 
         return (
             <View style={style}>
-                <View style={{ flex: 1 }} onLayout={(event) => this._onLayout(event)}>
+                <View
+                    testID={this.props.testID}
+                    style={{ flex: 1 }}
+                    onLayout={(event) => this._onLayout(event)}
+                >
                     {height > 0 && width > 0 && (
                         <Svg style={{ height, width }}>
                             {React.Children.map(children, (child) => {
